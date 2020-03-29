@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="5dp"
+        android:visibility="visible">
+
+        <ImageButton
+            android:id="@+id/previousMonth"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="onPreviousClicked"
+            app:srcCompat="@drawable/leftarrow" />
+
+        <Button
+            android:id="@+id/month_year"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:background="@android:color/white"
+            android:onClick="onMonthYearClicked"
+            android:text="March 2020"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/nextMonth"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="onNextClicked"
+            app:srcCompat="@drawable/rightarrow" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/daysLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:columnCount="7"
+        android:rowCount="7"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/sun0"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="0"
+            android:text="SUN"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/mon0"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="1"
+            android:text="MON"
+            android:textAlignment="center"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/tue0"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="2"
+            android:text="TUE"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/wed0"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="3"
+            android:text="WED"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/thu0"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="4"
+            android:text="THU"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/fri0"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="5"
+            android:text="FRI"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/sat0"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="6"
+            android:text="SAT"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/sun1"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="7"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/mon1"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="8"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/tue1"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="9"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/wed1"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="10"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/thu1"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="11"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/fri1"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="12"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sat1"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="13"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sun2"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="14"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/mon2"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="15"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/tue2"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="16"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/wed2"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="17"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/thu2"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="18"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/fri2"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="19"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sat2"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="20"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sun3"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="21"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/mon3"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="22"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/tue3"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="23"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/wed3"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="24"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/thu3"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="25"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/fri3"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="26"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sat3"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="27"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sun4"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="28"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/mon4"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="29"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/tue4"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="30"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/wed4"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="31"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/thu4"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="32"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/fri4"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="33"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sat4"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="34"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sun5"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="35"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/mon5"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="36"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/tue5"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="37"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/wed5"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="38"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/thu5"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="39"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/fri5"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="40"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sat5"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="41"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sun6"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="42"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/mon6"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="43"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/tue6"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="44"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/wed6"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="45"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/thu6"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="46"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/fri6"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="47"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/sat6"
+            android:layout_width="56dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:tag="48"
+            android:textSize="18sp" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/eventView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/daysLayout"
+        android:layout_marginTop="26dp"
+        android:text="Events"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/newEvent"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/eventView"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="185dp"
+        android:background="@drawable/roundbutton"
+        android:onClick="onNewEventClicked"
+        android:text="+ Add"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+
+    <Button
+        android:id="@+id/currentYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:text="2020"
+        android:textSize="36sp"
+        android:visibility="invisible" />
+
+    <GridLayout
+        android:id="@+id/monthLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/currentYear"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/month0"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="JANUARY"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/month1"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="FEBRUARY"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/month2"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="MARCH"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/month3"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="APRIL"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/month4"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="MAY"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/month5"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="JUNE"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/month6"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="JULY"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/month7"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="AUGUST"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/month8"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="SEPTEMBER"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/month9"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="OCTOBER"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/month10"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="NOVEMBER"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/month11"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="DECEMBER"
+            android:textSize="18sp" />
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/next_Years"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+
+        <ImageButton
+            android:id="@+id/previousYears"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/leftarrow" />
+
+        <TextView
+            android:id="@+id/yearTextView"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:text="2017 - 2032"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="36sp" />
+
+        <ImageButton
+            android:id="@+id/nextYears"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/rightarrow" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/yearGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/next_Years"
+        android:layout_marginTop="20dp"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:visibility="invisible">
+
+        <Button
+            android:id="@+id/button19"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button20"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button21"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button23"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button24"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button25"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button26"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button27"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button28"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button29"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button30"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button31"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button32"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button33"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/button34"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:textSize="24sp" />
+    </GridLayout>
+</RelativeLayout>
